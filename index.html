@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebSidekick — Smart AI Web Assistant & Copilot for Chrome</title>
+  <link rel="icon" href="icons/icon-48.png" type="image/png">
+  <style>
+    :root {
+      --bg-primary: #0b0f19;
+      --bg-secondary: #131b2e;
+      --bg-card: #1e293b;
+      --accent-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border-color: #334155;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body { background-color: var(--bg-primary); color: var(--text-main); line-height: 1.6; }
+    header { max-width: 1100px; margin: 0 auto; padding: 24px 20px; display: flex; justify-content: space-between; align-items: center; }
+    .logo { display: flex; align-items: center; gap: 10px; font-size: 20px; font-weight: 700; text-decoration: none; color: #fff; }
+    .logo-icon { background: var(--accent-gradient); width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; margin-left: 20px; font-size: 14px; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: #fff; }
+    
+    .hero { max-width: 850px; margin: 60px auto 40px auto; text-align: center; padding: 0 20px; }
+    .badge { display: inline-block; background: rgba(168, 85, 247, 0.15); color: #c4b5fd; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(168, 85, 247, 0.3); }
+    h1 { font-size: 46px; font-weight: 800; line-height: 1.2; margin-bottom: 20px; letter-spacing: -0.5px; }
+    h1 span { background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero p { font-size: 18px; color: var(--text-muted); margin-bottom: 32px; max-width: 650px; margin-left: auto; margin-right: auto; }
+    .cta-btn { display: inline-block; background: var(--accent-gradient); color: #fff; text-decoration: none; padding: 14px 32px; border-radius: 8px; font-size: 16px; font-weight: 600; box-shadow: 0 4px 20px rgba(139, 92, 246, 0.4); transition: transform 0.2s, opacity 0.2s; }
+    .cta-btn:hover { opacity: 0.95; transform: scale(1.02); }
+    
+    .features { max-width: 1000px; margin: 80px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+    .feature-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 28px; }
+    .feature-icon { font-size: 28px; margin-bottom: 14px; }
+    .feature-card h3 { font-size: 18px; margin-bottom: 10px; }
+    .feature-card p { font-size: 14px; color: var(--text-muted); }
+
+    .privacy-box { max-width: 800px; margin: 40px auto 80px auto; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 12px; padding: 32px; text-align: center; }
+    .privacy-box h2 { font-size: 22px; margin-bottom: 12px; }
+    .privacy-box p { font-size: 14px; color: var(--text-muted); margin-bottom: 20px; }
+    .privacy-link { color: #a855f7; text-decoration: underline; font-weight: 600; }
+
+    footer { border-top: 1px solid var(--border-color); padding: 30px 20px; text-align: center; font-size: 13px; color: var(--text-muted); }
+    footer a { color: var(--text-muted); text-decoration: none; margin: 0 10px; }
+    footer a:hover { color: #fff; }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="#" class="logo">
+      <div class="logo-icon">✨</div>
+      WebSidekick
+    </a>
+    <nav class="nav-links">
+      <a href="#features">Features</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="badge">🚀 Powered by Google Gemini 3.8 Flash</div>
+    <h1>Your Smart AI Companion for <span>Every Web Page</span></h1>
+    <p>WebSidekick lives right in your browser's side panel. It deeply analyzes the active page's full DOM structure, extracts tables, and delivers instant, accurate answers in seconds.</p>
+    <a href="privacy-policy.html" class="cta-btn">View Privacy & Documentation</a>
+  </section>
+
+  <section class="features" id="features">
+    <div class="feature-card">
+      <div class="feature-icon">📝</div>
+      <h3>Instant Page Summaries</h3>
+      <p>Grasp long articles, reports, and documentation with 1-click intelligent bullet points and executive summaries.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📊</div>
+      <h3>Table & Price Extraction</h3>
+      <p>Discover, isolate, and compare complex pricing tables, product specifications, and numerical datasets effortlessly.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🔒</div>
+      <h3>100% Privacy & Security</h3>
+      <p>Zero third-party intermediate servers. Your browser communicates directly and encrypted with Google's official Gemini API using your personal key.</p>
+    </div>
+  </section>
+
+  <div class="privacy-box">
+    <h2>Built with Total Privacy by Design</h2>
+    <p>We believe user privacy is non-negotiable. WebSidekick never sells, tracks, or stores your personal browsing data or credentials on external databases.</p>
+    <a href="privacy-policy.html" class="privacy-link">Read our full Privacy Policy &rarr;</a>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 WebSidekick. All rights reserved. &bull; <a href="privacy-policy.html">Privacy Policy</a></p>
+  </footer>
+</body>
+</html>
